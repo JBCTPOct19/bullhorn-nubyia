@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="add">Add a Message</a>
+<div th:each="bullhorn : ${bullhorns}">
+    <div th:if="${bullhorn.headshot} != null">
+        <img th:src="${bullhorn.headshot}" /><hr />
+    </div>
+    <h3 th:text="${bullhorn.sentby}"></h3><h4 th:text="${bullhorn.date}"></h4>
+</div>
+
+
+</body>
+</html>
